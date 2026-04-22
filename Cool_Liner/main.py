@@ -24,7 +24,12 @@ car_df["car_years"] = car_df["car_years"].str.replace(">", "").str.split("-")
 car_df = car_df.drop("car_sub_category", axis=1)
 car_df = car_df.drop("car_category", axis=1)
 
-print(df)
+df.to_json('df.json')
+product_df.to_json('product_df.json')
+car_df.to_json('car_df.json')
+prices_df.to_json('prices_df.json')
+translations_df.to_json('translations_df.json')
+shipping_df.to_json('shipping_df.json')
 
 
 
